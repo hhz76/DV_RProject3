@@ -1,22 +1,38 @@
 ---
-title: "Project3"
-author: "Henry"
-date: "Wednesday, February 25, 2015"
+title: "project3"
+author: "Henry Zhao, Brian Huang, Zachary Fine"
+date: "Friday, March 06, 2015"
 output: html_document
 ---
+<br><br><b><font color = #FF9933><font size = 5>
+Data Analysis on California Babies:</font></font><br>
+<font color = #FF9933><font size = 4>Disproving stereotypes (or proving them)</font></font>
+</font></b>
+<br><br><font size = 2> This is our third project and it looks at births in California by race, weight, and age of mother. We look at how these three variables are related and how they influence each other.
+<br><br>Can we predict anything about the race/weight/mother age of a baby by knowing another factor?</font>
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+---
+```{r}
+source("../01 Data/data.r", echo = TRUE)
+```
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+#Graphs
+#### In the first graph, we observed that most mothers under the age 20 are either Blacks or Hispanics
+
+#### In the second graph, we observed that the mother's age does not really affect whether or not the baby is born with a healthy weight, except mothers under age 20 tend to have babies with less healthy weight (either too big or too small)
+
+#### In the third graph, we can tell that White and Hispanic babies are prevalent in California. Asian babies tend to be lighter because only the "Under 1500g" count was significant for Filipino and SE Asian.
 
 ```{r}
-summary(cars)
+source("../02 Data Wrangling/data_wrangling.R", echo = TRUE)
 ```
 
-You can also embed plots, for example:
+### From this project, we built on what we learned from last time, by using joins and beautiful plotting. We learned to make our graphs look nicer with title formats, etc. We also joined multiple tables to practice different types of joins, and gained deeper understanding of SQL joins and R joins. In the process, we developed skills in analyzing multiple variables.
 
-```{r, echo=FALSE}
-plot(cars)
+
+```{r}
+source("../03 Visualizations/visualizations.R", echo = TRUE)
+source("../03 Visualizations/png.R", echo = TRUE)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### This is our PNG file that shows a characterization of the categorical columns (as group by plots) and measure columns (as histograms) for our main table.
